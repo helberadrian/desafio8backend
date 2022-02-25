@@ -1,0 +1,29 @@
+{
+  "name": "desafio8backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helberadrian/desafio8backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helberadrian/desafio8backend/issues"
+  },
+  "homepage": "https://github.com/helberadrian/desafio8backend#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "knex": "^1.0.3",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15",
+    "sqlite3": "^5.0.2"
+  }
+}
