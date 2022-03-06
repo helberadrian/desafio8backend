@@ -1,13 +1,13 @@
-const { base } = require("./conectiondb");
-const knex = require("knex")(base);
+const knex = require("./conectiondb");
 
 knex.schema.createTable('productos', (table) => {
-    table.increments('id')
-    table.string('nombre')
-    table.integer('precio')
-    table.integer("cantidad")
+    table.increments();
+    table.string("nombre");
+    table.integer("precio");
+    table.integer("cantidad");
+    table.timestamps();
   })
-  .then(() => console.log("Tabla creada con exito..."))
+  .then((data) => console.log("Tabla creada con exito..."))
   .catch((error) => {console.log(error)})
   .finally(() =>{
       knex.destroy();
