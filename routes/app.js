@@ -3,6 +3,9 @@ const router = Router();
 const Contenedor = require("../class/class")
 const producto = new Contenedor();
 
+// Faker
+import fakergenerate from "./faker"
+
 // GET RAIZ
 router.get("/", (req, res) => {
     res.json({
@@ -54,5 +57,17 @@ router.delete("/productos/:id", (req, res) =>{
         res.send(console.log("Ocurrio un error, producto no eliminado..."))
     }
 });
+
+// FAKER
+router.post("/productos-test/", (req, res) => {
+    const id = this.length(producto.getAll())
+    const random_product = fakergenerate(id)
+
+    if (producto.agregarProducto(random_product) == true){
+        res.send(console.log("Productos agregado con exito..."))
+    } else{
+        res.send(console.log("Ocurrio un error, productos no agregados..."))
+    }
+})
 
 module.exports = router;
