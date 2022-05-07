@@ -1,0 +1,65 @@
+[
+    {
+        "mensajes": [{
+            "id": 1,
+            "texto": "Hola esto es una prueba",
+            "autor": {
+                "id": 2,
+                "nombre": "Juan",
+                "edad": 20,
+                "alias": "juancho",
+                "email": "juan@mail.com",
+                "avatar": "https://i.pinimg.com/550x/72/df/30/72df30b8b200848e492625ef95dd2e50.jpg"
+            }
+        },
+        {
+            "id": 2,
+            "texto": "esto es otro mensaje",
+            "autor": {
+                "id": 1,
+                "nombre": "Pedro",
+                "edad": 27,
+                "alias": "pedromartinez",
+                "email": "pedro@mail.com",
+                "avatar": "https://i.pinimg.com/550x/72/df/30/72df30b8b200848e492625ef95dd2e50.jpg"
+            }
+        },
+        {
+            "id": 3,
+            "texto": "que tal este otro mensaje",
+            "autor": {
+                "id": 2,
+                "nombre": "Juan",
+                "edad": 20,
+                "alias": "juancho",
+                "email": "juan@mail.com",
+                "avatar": "https://i.pinimg.com/550x/72/df/30/72df30b8b200848e492625ef95dd2e50.jpg"
+            }
+        },
+        {
+            "id": 4,
+            "texto": "probando de nuevo",
+            "autor": {
+                "id": 1,
+                "nombre": "Pedro",
+                "edad": 27,
+                "alias": "pedromartinez",
+                "email": "pedro@mail.com",
+                "avatar": "https://i.pinimg.com/550x/72/df/30/72df30b8b200848e492625ef95dd2e50.jpg"
+            }
+        },
+        {
+            "id": 5,
+            "texto": "vamos a volver a comentar algo",
+            "autor": {
+                "id": 3,
+                "nombre": "Alex",
+                "edad": 24,
+                "alias": "alexito",
+                "email": "alex@mail.com",
+                "avatar": "https://i.pinimg.com/550x/72/df/30/72df30b8b200848e492625ef95dd2e50.jpg"
+            }
+        }
+    ]
+    }
+]

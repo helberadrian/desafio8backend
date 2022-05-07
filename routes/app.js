@@ -3,6 +3,9 @@ const router = Router();
 const Contenedor = require("../class/class")
 const producto = new Contenedor();
 
+// Archivos y Normalizr
+const fs = require("fs");
+
 // Faker
 import fakergenerate from "./faker"
 
@@ -57,6 +60,16 @@ router.delete("/productos/:id", (req, res) =>{
         res.send(console.log("Ocurrio un error, producto no eliminado..."))
     }
 });
+
+// MENSAJES
+router.post("/mensaje/", async (req, res) => {
+    try {
+        mensaje = req.body;
+
+    } catch {
+        
+    }
+})
 
 // FAKER
 router.post("/productos-test/", (req, res) => {
