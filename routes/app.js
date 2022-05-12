@@ -3,6 +3,9 @@ const router = Router();
 const Contenedor = require("../class/class")
 const producto = new Contenedor();
 
+// Login
+const auth = require("../auth/autenticar");
+
 // Archivos y Normalizr
 const fs = require("fs");
 
@@ -81,6 +84,28 @@ router.post("/productos-test/", (req, res) => {
     } else{
         res.send(console.log("Ocurrio un error, productos no agregados..."))
     }
+})
+
+// LOGIN
+router.post('/login', (req, res) => {
+    const datos = req.body;
+    const { usuario, password } = datos;
+    try {
+        auth.autenticar(usuario, password);
+    } catch (error) {
+        return res.status(401).json({ msg: error.message });
+    }
+    req.session.user = {
+        usuario
+    }
+    return res.render("../public/index.html");
+})
+
+router.get('/logout', (req, res) => {
+    if (req.session.user) {
+        req.session.destroy()
+    }
+    res.render("../public/index.html");
 })
 
 module.exports = router;
