@@ -1,13 +1,10 @@
-import { obtenerUsuarioPorNombre } from '../persistencia/usuarios.js'
+const Usuarios = require("../class/user")
+const usuario = new Usuarios();
 
-export function autenticar(nombre, password) {
-    let usuario
+export function autenticar(nombre) {
     try {
-        usuario = obtenerUsuarioPorNombre(nombre)
+        const datos = usuario.getUserName(nombre);
     } catch (error) {
-        throw new Error('error en la autenticacion')
-    }
-    if (usuario.password !== password) {
         throw new Error('error en la autenticacion')
     }
 }

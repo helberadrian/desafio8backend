@@ -12,3 +12,15 @@ knex.schema.createTable('productos', (table) => {
   .finally(() =>{
       knex.destroy();
   });
+
+knex.schema.createTable('usuarios', (table) => {
+    table.increments();
+    table.string("username");
+    table.integer("email");
+    table.integer("password");
+  })
+  .then((data) => console.log("Tabla creada con exito..."))
+  .catch((error) => {console.log(error)})
+  .finally(() =>{
+      knex.destroy();
+  });
